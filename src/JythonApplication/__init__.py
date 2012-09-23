@@ -1,6 +1,6 @@
 # Mix of Python and Java Imports
 from javax.swing import JFrame, JLabel, ImageIcon
-from java.awt import BorderLayout, Toolkit
+from java.awt import BorderLayout
 from datetime import date
 from org.python.core import imp
 import sys
@@ -13,7 +13,7 @@ class MainWindow(JFrame):
 		self.defaultCloseOperation = JFrame.EXIT_ON_CLOSE
 		self.setLayout(BorderLayout())
 		
-		image = ImageIcon(getImage(getResource("resources/dracula.png")))
+		image = ImageIcon(getResource("resources/dracula.png"))
 		# Standard Image load, except getResource must be used to access
 		# resources within the Jar file.
 		label = JLabel(image)
@@ -28,8 +28,7 @@ class MainWindow(JFrame):
 if __name__ == "JythonApplication":
 	# Set the ClassLoader for use of getResource
 	sys.setClassLoader(imp.getParentClassLoader())
-	# Alias some functions for cleaner code
-	getImage = Toolkit.getDefaultToolkit().getImage
+	# Alias long function for cleaner code
 	getResource = sys.classLoader.getResource
 	# Initialise the GUI
 	MainWindow()
