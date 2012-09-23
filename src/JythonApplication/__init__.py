@@ -1,31 +1,35 @@
+# Mix of Python and Java Imports
 from javax.swing import JFrame, JLabel, ImageIcon
 from java.awt import BorderLayout, Toolkit
 from datetime import date
 from org.python.core import imp
 import sys
 
-
-def getImage(url):
-	return Toolkit.getDefaultToolkit().getImage(sys.classLoader.getResource(url))
-
-		
-
+# The basic Swing GUI
 class MainWindow(JFrame):
 	def __init__(self):
 		self.title = 'Dracula!'
 		self.size = (300,200)
 		self.defaultCloseOperation = JFrame.EXIT_ON_CLOSE
 		self.setLayout(BorderLayout())
-
-		image = JLabel(ImageIcon(getImage("resources/dracula.png")))
-		self.add(image, BorderLayout.CENTER)
+		
+		image = ImageIcon(getImage(getResource("resources/dracula.png")))
+		# Standard Image load, except getResource must be used to access
+		# resources within the Jar file.
+		label = JLabel(image)
+		self.add(label, BorderLayout.CENTER)
 
 		todaysdate = JLabel("Todays date is "+str(date.today()))
+		# Get current date using Python's Standard datetime module
 		self.add(todaysdate, BorderLayout.SOUTH)
-
 		self.visible = True
 
 
-
-sys.setClassLoader(imp.getClassLoader())
-MainWindow()
+if __name__ == "JythonApplication":
+	# Set the ClassLoader for use of getResource
+	sys.setClassLoader(imp.getParentClassLoader())
+	# Alias some functions for cleaner code
+	getImage = Toolkit.getDefaultToolkit().getImage
+	getResource = sys.classLoader.getResource
+	# Initialise the GUI
+	MainWindow()
