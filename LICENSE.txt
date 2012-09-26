@@ -1,4 +1,19 @@
 ################################################################################
+### Modifications from the original example by Ryan McGuire have been made by
+### Pete Dickson (www.noskcid.com). A lot of this example is based on the work
+### of Ryan McGuire and as such I have left his unedited License below and have
+### clearly attributed his work when used. I would also like to praise him for 
+### his original example which very much got me on my way to distributing my
+### Jython Scripts.
+###
+### Like Ryan, I would appreciate some attribution if you were to go on to use 
+### this example elsewhere, but otherwise I give this to you 'as is'.  
+###
+### - Pete
+################################################################################
+
+
+################################################################################
 ### This software is written by Ryan McGuire (EnigmaCurry.com)
 ################################################################################
 
@@ -49,12 +64,6 @@ This application utilizes the OneJar (http://one-jar.sourceforge.net) framework.
 OneJar comes with it's own free license and is included in this package as 
 onejar-src/one-jar-license.txt.
 
-################################################################################
-###  Apache POI:
-################################################################################
-Apache POI is used in this package as an example of a third party java library.
-It's licensed under the Apache License and a copy is contained inside the POI 
-jar file.
 
 ################################################################################
 ###  Jython License:
@@ -88,5 +97,18 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 ################################################################################
 
+Additionally, in this modified example an image is included for use within the
+example.
+
+################################################################################
+###  ClassicMonsterIcons License:
+################################################################################
+
+All icons on the FastIcon's "Download page" are FREE for use in both personal and
+commercial projects. The ClassicMonsterIcons used in this example are by 
+(FastIcon.com). I would like to thank FastIcon for providing these images free of
+charge.
+
+################################################################################
 
 phew. Don't you just hate legal crap?

@@ -18,6 +18,9 @@ A standalone Jar (including resources) will be produced containing the
 Application. The Jar requires no external dependancies other than a JVM on the
 host computer.
 
+A quick thank you to FastIcon.com for providing the example image used in this example.
+(More information in LICENSE.txt)
+
 To base your own project off this example you should understand how
 this package is organized:
 
@@ -36,12 +39,11 @@ this package is organized:
 	  
     Since this is a Jython project, the jython jar is required in this
     directory. This Jython jar does not contain the Python Standard Library
-	as, when packaged as a standalone Jar, Jython cannot find it in this
-	location.
-	Instead the Jython /Lib directory has been compressed into (modules.jar)
-	and is stored separately to the Jython Distribution, the location of
-	the standard library is made known to Jython by adding it to the classpath
-	in Main.java.
+    as, when packaged as a standalone Jar, Jython cannot find it in this location.
+    Instead the Jython /Lib directory has been compressed into (modules.jar)
+    and is stored separately to the Jython Distribution, the location of
+    the standard library is made known to Jython by adding it to the classpath
+    in Main.java.
 
  * /java-src
     This is meant to be a Python project, but since this is Jython,
@@ -66,12 +68,13 @@ this package is organized:
     license is automatically built into any .jar that this package builds.
 
  * /resources
- 	This is where to store anything that you want packaged with the application
-	that it may require. This may be images or audio for example. This folder
-	is copied directly into the root of the standalone Jar.
+    This is where to store anything that you want packaged with the application
+    that it may require. This may be images or audio for example. This folder
+    is copied directly into the root of the standalone Jar.
 
-	For how to load resources within the Jar, see the example Jython Script
-	(src/__init__.py)
+    For info on how to load resources within the Jar, see the example Jython
+    Script (src/__init__.py)
+
 
 Building the app:
 
